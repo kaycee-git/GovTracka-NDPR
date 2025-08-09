@@ -2,15 +2,24 @@
   "version": 2,
   "builds": [
     {
+<<<<<<< HEAD
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "outputDirectory": "dist" }
+=======
+      "src": "src/main.py",
+      "use": "@vercel/python"
+>>>>>>> 577d51a64e11d1f94df789e941b62fabe0c0235c
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
+<<<<<<< HEAD
       "dest": "/index.html"
+=======
+      "dest": "src/main.py"
+>>>>>>> 577d51a64e11d1f94df789e941b62fabe0c0235c
     }
   ]
 }

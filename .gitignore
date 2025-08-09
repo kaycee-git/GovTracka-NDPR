@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 .pnpm-lock.yaml
@@ -88,4 +89,6 @@ dist
 tmp/
 temp/
 
+=======
+>>>>>>> 577d51a64e11d1f94df789e941b62fabe0c0235c
 .vercel
