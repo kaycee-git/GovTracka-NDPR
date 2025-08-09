@@ -119,32 +119,95 @@
   }
 }
 
-/* Hide Manus branding from deployment platform */
+/* Hide Manus branding from deployment platform - Ultra aggressive approach */
 [data-manus-branding],
 .manus-branding,
 *[class*="manus"],
 *[id*="manus"],
-*[data-testid*="manus"] {
+*[data-testid*="manus"],
+*[data-*="manus"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   height: 0 !important;
   width: 0 !important;
   overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  z-index: -9999 !important;
 }
 
 /* Hide any footer branding that contains "Made with" */
 footer *:has-text("Made with"),
 div *:has-text("Made with Manus"),
 span *:has-text("Made with"),
-a[href*="manus"] {
+a[href*="manus"],
+*:contains("Made with Manus"),
+*:contains("Made with") {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Target specific Manus deployment branding with all possible selectors */
+div[style*="position: fixed"],
+div[style*="position:fixed"],
+div[style*="bottom: 20px"],
+div[style*="bottom:20px"],
+div[style*="right: 20px"],
+div[style*="right:20px"],
+div[style*="z-index: 9999"],
+div[style*="z-index:9999"],
+div[style*="background: black"],
+div[style*="background:black"],
+div[style*="background-color: black"],
+div[style*="background-color:black"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide any element containing "Made with Manus" text */
+*[title*="Manus"],
+*[alt*="Manus"],
+*[aria-label*="Manus"] {
   display: none !important;
 }
 
 /* Additional branding removal */
 .footer-branding,
 .platform-branding,
-.deployment-branding {
+.deployment-branding,
+.powered-by,
+.made-with {
+  display: none !important;
+}
+
+/* Hide any fixed positioned elements in bottom right corner */
+div[style*="position:fixed"][style*="bottom"][style*="right"],
+div[style*="position: fixed"][style*="bottom"][style*="right"] {
+  display: none !important;
+}
+
+/* Global override for any element with Manus text */
+body *:not(script):not(style) {
+  &:has-text("Made with Manus") {
+    display: none !important;
+  }
+}
+
+/* Use CSS content to override any Manus branding */
+*::before,
+*::after {
+  content: none !important;
+}
+
+/* Hide elements by common deployment platform patterns */
+[class*="deployment"],
+[class*="platform"],
+[class*="powered"],
+[class*="branding"] {
   display: none !important;
 }
 

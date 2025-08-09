@@ -27,6 +27,7 @@ import Dashboard from './components/Dashboard'
 import ReportForm from './components/ReportForm'
 import TransparencyFeed from './components/TransparencyFeed'
 import USSDSimulator from './components/USSDSimulator'
+import AuthPages from './components/AuthPages'
 
 function App() {
   const [currentView, setCurrentView] = useState('home')
@@ -41,6 +42,9 @@ function App() {
         return <TransparencyFeed />
       case 'ussd':
         return <USSDSimulator />
+      case 'login':
+      case 'signup':
+        return <AuthPages activeTab={currentView} setActiveTab={setCurrentView} />
       default:
         return <HomePage />
     }

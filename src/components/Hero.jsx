@@ -22,17 +22,15 @@ const Hero = ({ setCurrentView }) => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <div className="text-white">
-            <div className="flex items-center mb-6">
-              <Badge className="bg-green-500 text-white border-green-400">
-                🇳🇬 Made for Nigeria
-              </Badge>
-              <Badge variant="outline" className="ml-2 text-white border-white">
-                NDPR Compliant
-              </Badge>
-            </div>
-
+          <div>
+              <div className="flex items-center space-x-4 mb-8">
+                <Badge className="bg-green-100 text-green-800 hover:bg-green-200">
+                  🇳🇬 Made for Nigeria
+                </Badge>
+                <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">
+                  NDPA 2023 Compliant
+                </Badge>
+              </div>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
               Fight Corruption
               <span className="block text-green-300">One Report at a Time</span>
@@ -47,7 +45,7 @@ const Hero = ({ setCurrentView }) => {
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
               <div className="flex items-center">
                 <Shield className="h-5 w-5 text-green-300 mr-2" />
-                <span className="text-sm">NDPR Protected</span>
+                <span className="text-sm">NDPA 2023 Protected</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-green-300 mr-2" />

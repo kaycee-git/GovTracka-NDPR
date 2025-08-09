@@ -516,7 +516,7 @@ Choose option:`
                   {sessionActive && (
                     <div className="mt-4 border-t border-green-600 pt-2">
                       <div className="flex items-center">
-                        <span className="text-green-300 mr-2">></span>
+                          <span className="text-green-300 mr-2">&gt;</span>
                         <input
                           type="text"
                           value={userInput}

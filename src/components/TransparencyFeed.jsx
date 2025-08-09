@@ -38,7 +38,7 @@ const TransparencyFeed = () => {
     const fetchFeed = async () => {
       try {
         setLoading(true)
-        const response = await fetch('https://xlhyimc39mw6.manus.space/api/feed')
+        const response = await fetch('https://j6h5i7c0d0w5.manus.space/api/feed')
         const data = await response.json()
         
         // Transform API data to match component structure

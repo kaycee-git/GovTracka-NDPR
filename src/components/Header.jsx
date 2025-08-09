@@ -64,6 +64,20 @@ const Header = ({ currentView, setCurrentView }) => {
             <Button 
               variant="outline" 
               size="sm"
+              onClick={() => setCurrentView('login')}
+            >
+              Login
+            </Button>
+            <Button 
+              size="sm"
+              onClick={() => setCurrentView('signup')}
+              className="bg-green-600 hover:bg-green-700"
+            >
+              Sign Up
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm"
               onClick={() => setCurrentView('ussd')}
             >
               Try USSD: *347*#
